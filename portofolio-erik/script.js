@@ -1,10 +1,50 @@
-//  NAVBAR SCROLL 
+// ── NAVBAR SCROLL ──
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 50);
 });
 
-//  REVEAL ON SCROLL 
+// ── MOBILE NAV TOGGLE ──
+const navToggle = document.getElementById('nav-toggle');
+const navLinksEl = document.getElementById('nav-links');
+const navOverlay = document.getElementById('nav-overlay');
+
+function openMobileNav() {
+  navLinksEl.classList.add('open');
+  navOverlay.classList.add('open');
+  navToggle.setAttribute('aria-expanded', 'true');
+  navToggle.setAttribute('aria-label', 'Tutup menu navigasi');
+  document.body.style.overflow = 'hidden';
+}
+function closeMobileNav() {
+  navLinksEl.classList.remove('open');
+  navOverlay.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+  navToggle.setAttribute('aria-label', 'Buka menu navigasi');
+  document.body.style.overflow = '';
+}
+navToggle.addEventListener('click', () => {
+  const isOpen = navLinksEl.classList.contains('open');
+  isOpen ? closeMobileNav() : openMobileNav();
+});
+navOverlay.addEventListener('click', closeMobileNav);
+navLinksEl.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', closeMobileNav);
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && navLinksEl.classList.contains('open')) {
+    closeMobileNav();
+    navToggle.focus();
+  }
+});
+// Close mobile menu automatically if the viewport is resized to desktop width
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 900 && navLinksEl.classList.contains('open')) {
+    closeMobileNav();
+  }
+});
+
+// ── REVEAL ON SCROLL ──
 const revealEls = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -17,37 +57,17 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 revealEls.forEach(el => revealObserver.observe(el));
 
-//  PROJECT DESC TOGGLE ("Lihat selengkapnya") 
-document.querySelectorAll('.project-card-desc').forEach(desc => {
-  const btn = desc.nextElementSibling;
-  if (!btn || !btn.classList.contains('project-desc-toggle')) return;
-
-  // Sembunyikan tombol kalau teksnya gak kepotong 
-  if (desc.scrollHeight <= desc.clientHeight + 1) {
-    btn.classList.add('hidden');
-    return;
-  }
-
-  btn.addEventListener('click', () => {
-    const isExpanded = desc.classList.toggle('expanded');
-    btn.textContent = isExpanded ? 'Sembunyikan' : 'Lihat selengkapnya';
+// ── KEYBOARD SUPPORT FOR CLICKABLE CARDS (cert cards, project shots) ──
+document.querySelectorAll('[role="button"][onclick]').forEach(el => {
+  el.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      el.click();
+    }
   });
 });
 
-//  SKILL BARS ANIMATION 
-const skillBars = document.querySelectorAll('.skill-bar');
-const barObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const bar = entry.target;
-      bar.style.width = (parseFloat(bar.dataset.width) * 100) + '%';
-      barObserver.unobserve(bar);
-    }
-  });
-}, { threshold: 0.3 });
-skillBars.forEach(bar => barObserver.observe(bar));
-
-//  LIGHTBOX 
+// ── LIGHTBOX ──
 const certData = {
   cert1: { title: 'Belajar Membuat Front-End Web untuk Pemula', sub: 'Dicoding Indonesia · 25 April 2026 · ID: 0LZ0YRO93X65' },
   cert2: { title: 'Belajar Dasar Pemrograman Web',             sub: 'Dicoding Indonesia · 15 Maret 2026 · ID: JMZVO9033XN9' },
@@ -55,9 +75,10 @@ const certData = {
   cert4: { title: 'Belajar Dasar Cloud dan Gen Ai di AWS',     sub: 'Dicoding Indonesia · 08 Juli 2026 · ID: XYZ789ABC123' },
 };
 
-//slide 
+// Setiap project bisa punya lebih dari 1 foto — tinggal tambah path di array "photos".
+// Urutan foto mengikuti urutan di array ini (paling atas = foto pertama tampil).
 const projectData = {
-  proj1: { title: 'Simulasi Jaringan Kantor Pusat-Cabang dengan VLAN dan OSPF',       photos: ['img/projek-cisco.png','img/cisco3.png','img/cisco2.png','img/cisco4.png','img/cisco5.png','img/cisco6.png','img/cisco7.png'] },
+  proj1: { title: 'Simulasi Jaringan Enterprise dengan VLAN & OSPF',       photos: ['img/projek-cisco.png','img/cisco3.png','img/cisco2.png','img/cisco4.png','img/cisco5.png','img/cisco6.png','img/cisco7.png'] },
   proj2: { title: 'Game Suit Gunting Kertas Batu',   photos: ['img/suit.png'] },
   proj3: { title: 'Rekap Nilai Rapor',               photos: ['img/rekapnilai1.png', 'img/rekapnilai2.png'] },
   proj4: { title: 'Deteksi Sandi Morse',             photos: ['img/cv5.jpg','img/cv4.jpg','img/cv3.jpg','img/cv1.jpg'] },
@@ -71,7 +92,7 @@ let currentIndex = 0;
 
 function openLightbox(id) {
   const data = certData[id];
-  currentGallery = null; 
+  currentGallery = null; // sertifikat tidak pakai galeri multi-foto
   document.getElementById('lightbox-title').textContent = data.title;
   document.getElementById('lightbox-sub').textContent   = data.sub;
 
@@ -181,7 +202,7 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowRight') lightboxNext(e);
 });
 
-//  LIGHTBOX SWIPE (mobile) 
+// ── LIGHTBOX SWIPE (mobile) ──
 const lightboxInner = document.querySelector('.lightbox-inner');
 let touchStartX = 0;
 lightboxInner.addEventListener('touchstart', e => {
@@ -194,22 +215,53 @@ lightboxInner.addEventListener('touchend', e => {
   }
 });
 
-//  CONTACT FORM 
-document.querySelector('.form-btn').addEventListener('click', async () => {
-  const name    = document.querySelector('.form-input[data-field="name"]').value.trim();
-  const email   = document.querySelector('.form-input[data-field="email"]').value.trim();
-  const message = document.querySelector('.form-textarea').value.trim();
-  const btn     = document.querySelector('.form-btn');
+// ── CONTACT FORM ──
+const contactForm    = document.getElementById('contact-form');
+const nameInput       = document.getElementById('contact-name');
+const emailInput      = document.getElementById('contact-email');
+const messageInput    = document.getElementById('contact-message');
+const formStatus      = document.getElementById('form-status');
 
-  if (!name || !email) {
-    alert('Mohon isi nama dan email terlebih dahulu.');
+function setFieldError(input, errorEl, message) {
+  if (message) {
+    input.classList.add('has-error');
+    errorEl.textContent = message;
+    errorEl.classList.add('visible');
+  } else {
+    input.classList.remove('has-error');
+    errorEl.textContent = '';
+    errorEl.classList.remove('visible');
+  }
+}
+
+function isValidEmail(value) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+}
+
+contactForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const name    = nameInput.value.trim();
+  const email   = emailInput.value.trim();
+  const message = messageInput.value.trim();
+  const btn     = contactForm.querySelector('.form-btn');
+
+  const errName    = document.getElementById('err-name');
+  const errEmail   = document.getElementById('err-email');
+  const errMessage = document.getElementById('err-message');
+
+  setFieldError(nameInput, errName, name ? '' : 'Mohon isi nama Anda.');
+  setFieldError(emailInput, errEmail, !email ? 'Mohon isi email Anda.' : (!isValidEmail(email) ? 'Masukkan email yang valid.' : ''));
+  setFieldError(messageInput, errMessage, message ? '' : 'Mohon isi pesan Anda.');
+
+  if (!name || !email || !isValidEmail(email) || !message) {
+    formStatus.textContent = '';
+    formStatus.className = 'form-status';
     return;
   }
-  if (!message) {
-    alert('Mohon isi pesan terlebih dahulu.');
-    return;
-  }
 
+  formStatus.textContent = '';
+  formStatus.className = 'form-status';
   btn.textContent = 'Mengirim...';
   btn.disabled = true;
 
@@ -221,20 +273,19 @@ document.querySelector('.form-btn').addEventListener('click', async () => {
     });
 
     if (res.ok) {
-      btn.textContent = '✓ Pesan Terkirim!';
-      document.querySelector('.form-input[data-field="name"]').value = '';
-      document.querySelector('.form-input[data-field="email"]').value = '';
-      document.querySelector('.form-textarea').value = '';
-      setTimeout(() => {
-        btn.textContent = 'Kirim Pesan →';
-        btn.disabled = false;
-      }, 3000);
+      formStatus.textContent = '✓ Pesan berhasil dikirim! Terima kasih sudah menghubungi saya.';
+      formStatus.className = 'form-status success';
+      contactForm.reset();
+      btn.textContent = 'Kirim Pesan →';
+      btn.disabled = false;
     } else {
       throw new Error('Gagal');
     }
   } catch {
-    alert('Pesan gagal terkirim. Coba lagi ya!');
+    formStatus.textContent = 'Pesan gagal terkirim. Coba lagi ya!';
+    formStatus.className = 'form-status error';
     btn.textContent = 'Kirim Pesan →';
     btn.disabled = false;
   }
 });
+      
