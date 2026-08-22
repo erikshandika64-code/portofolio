@@ -682,13 +682,23 @@ section {
   font-size: 0.95rem;
   color: var(--muted);
   line-height: 1.7;
-  margin-bottom: 1.4rem;
+  margin-bottom: 0.6rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+.project-featured-desc.measuring,
+.project-featured-desc.expanded {
+  -webkit-line-clamp: unset;
+  overflow: visible;
 }
 .project-featured-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
   margin-bottom: 1.6rem;
+  margin-top: 1.2rem;
 }
 .project-featured-tags .project-tag {
   margin-bottom: 0;
@@ -697,12 +707,31 @@ section {
   max-width: 200px;
 }
 
+.desc-toggle {
+  display: inline-block;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.desc-toggle:hover {
+  color: var(--ink);
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 .project-card {
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--border);
   border-radius: 6px;
   overflow: hidden;
@@ -749,6 +778,9 @@ section {
 }
 .project-card-body {
   padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .project-card-title-row {
   display: flex;
@@ -780,11 +812,23 @@ section {
   font-size: 0.85rem;
   color: var(--muted);
   line-height: 1.6;
-  margin-bottom: 1.4rem;
+  margin-bottom: 0.4rem;
+  min-height: 4.1rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.project-card-desc.measuring,
+.project-card-desc.expanded {
+  -webkit-line-clamp: unset;
+  overflow: visible;
 }
 .project-card-actions {
   display: flex;
   gap: 0.7rem;
+  margin-top: auto;
+  padding-top: 0.6rem;
 }
 .project-btn {
   flex: 1;
