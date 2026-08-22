@@ -57,6 +57,48 @@ const revealObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 revealEls.forEach(el => revealObserver.observe(el));
 
+// ── PROJECT DESCRIPTION "SELENGKAPNYA" TOGGLE ──
+function setupDescToggle(el) {
+  // remove any toggle button from a previous run (e.g. on resize)
+  const existingBtn = el.nextElementSibling;
+  if (existingBtn && existingBtn.classList.contains('desc-toggle')) {
+    existingBtn.remove();
+  }
+  el.classList.remove('expanded');
+
+  // measure full (unclamped) height vs current clamped height
+  el.classList.add('measuring');
+  const fullHeight = el.scrollHeight;
+  el.classList.remove('measuring');
+  const clampedHeight = el.clientHeight;
+
+  if (fullHeight > clampedHeight + 4) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'desc-toggle';
+    btn.textContent = 'Selengkapnya';
+    btn.setAttribute('aria-expanded', 'false');
+    btn.addEventListener('click', () => {
+      const isExpanded = el.classList.toggle('expanded');
+      btn.textContent = isExpanded ? 'Sembunyikan' : 'Selengkapnya';
+      btn.setAttribute('aria-expanded', String(isExpanded));
+    });
+    el.insertAdjacentElement('afterend', btn);
+  }
+}
+
+function initDescToggles() {
+  document.querySelectorAll('.project-card-desc, .project-featured-desc').forEach(setupDescToggle);
+}
+
+window.addEventListener('load', initDescToggles);
+
+let descResizeTimer;
+window.addEventListener('resize', () => {
+  clearTimeout(descResizeTimer);
+  descResizeTimer = setTimeout(initDescToggles, 300);
+});
+
 // ── KEYBOARD SUPPORT FOR CLICKABLE CARDS (cert cards, project shots) ──
 document.querySelectorAll('[role="button"][onclick]').forEach(el => {
   el.addEventListener('keydown', e => {
@@ -288,4 +330,3 @@ contactForm.addEventListener('submit', async (e) => {
     btn.disabled = false;
   }
 });
-      
