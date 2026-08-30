@@ -1,643 +1,1151 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfolio Erik Shandika, siswa TJKT SMKN Situraja yang fokus mengembangkan kemampuan di bidang Networking, Cybersecurity, dan Artificial Intelligence melalui project dan praktik langsung." />
-  <title>Erik Shandika — TJKT Student · Networking · Cybersecurity · AI</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio Erik Shandika, siswa TJKT SMKN Situraja yang fokus mengembangkan kemampuan di bidang Networking, Cybersecurity, dan Artificial Intelligence melalui project dan praktik langsung."
+    />
+    <title>
+      Erik Shandika — TJKT Student · Networking · Cybersecurity · AI
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav id="navbar">
+      <a href="#hero" class="nav-logo"
+        >Erik<em style="font-style: italic">.</em></a
+      >
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#skills">Keahlian</a></li>
+        <li><a href="#projects">Proyek</a></li>
+        <li><a href="#certificates">Sertifikat</a></li>
+        <li><a href="#contact">Kontak</a></li>
+        <li><a href="#contact" class="nav-cta">Let's Talk →</a></li>
+      </ul>
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-expanded="false"
+        aria-controls="nav-links"
+        aria-label="Buka menu navigasi"
+      >
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
 
-<!-- NAV -->
-<nav id="navbar">
-  <a href="#hero" class="nav-logo">Erik<em style="font-style:italic">.</em></a>
-  <ul class="nav-links" id="nav-links">
-    <li><a href="#about">Tentang</a></li>
-    <li><a href="#skills">Keahlian</a></li>
-    <li><a href="#projects">Proyek</a></li>
-    <li><a href="#certificates">Sertifikat</a></li>
-    <li><a href="#contact">Kontak</a></li>
-    <li><a href="#contact" class="nav-cta">Let's Talk →</a></li>
-  </ul>
-  <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Buka menu navigasi">
-    <span class="nav-toggle-bar"></span>
-    <span class="nav-toggle-bar"></span>
-    <span class="nav-toggle-bar"></span>
-  </button>
-</nav>
-<div class="nav-overlay" id="nav-overlay"></div>
+    <!-- ══════════════ HERO ══════════════ -->
+    <section id="hero">
+      <div class="hero-bg-line"></div>
+      <div class="hero-number">01</div>
 
-<!-- ══════════════ HERO ══════════════ -->
-<section id="hero">
-  <div class="hero-bg-line"></div>
-  <div class="hero-number">01</div>
-
-  <div class="hero-left">
-    <span class="hero-tag">TJKT Student · Networking · Cybersecurity · AI</span>
-    <h1 class="hero-name">
-      Erik<br>
-      <em>Shandika</em>
-    </h1>
-    <p class="hero-desc">
-      Siswa Teknik Jaringan Komputer &amp; Telekomunikasi yang mengeksplorasi networking, cybersecurity, dan artificial intelligence melalui project dan praktik langsung.
-    </p>
-    <div class="hero-cta-group">
-      <a href="#projects" class="hero-cta">
-        Lihat Proyek
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M5 12h14M12 5l7 7-7 7"/>
-        </svg>
-      </a>
-      <a href="#contact" class="hero-cta hero-cta-ghost">Hubungi Saya</a>
-    </div>
-  </div>
-
-  <div class="hero-right">
-    <div class="hero-card">
-      <div class="stat-grid">
-        <div class="stat-item">
-          <div class="stat-num">07</div>
-          <div class="stat-label">Proyek</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">04</div>
-          <div class="stat-label">Sertifikat</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">03+</div>
-          <div class="stat-label">Tech Stack</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-num">TJKT</div>
-          <div class="stat-label">Background</div>
-        </div>
-      </div>
-      <div class="hero-status">
-        <span class="status-dot"></span>
-        Terbuka untuk kolaborasi &amp; proyek baru
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════ ABOUT ══════════════ -->
-<section id="about">
-  <div class="section-header reveal">
-    <div>
-      <div class="section-label">01 — Tentang Saya</div>
-      <h2 class="section-title">Mengenal <em>lebih dekat</em></h2>
-    </div>
-    <span class="section-num">01</span>
-  </div>
-  <div class="about-grid">
-    <div class="about-info-card reveal">
-      <span class="about-badge-static">TJKT Student</span>
-      <div class="about-details">
-        <div class="about-row">
-          <span class="about-row-label">Sekolah</span>
-          <span class="about-row-value">SMKN Situraja — TJKT</span>
-        </div>
-        <div class="about-row">
-          <span class="about-row-label">Fokus</span>
-          <span class="about-row-value">Jaringan Komputer dan Administrasi Sistem</span>
-        </div>
-        <div class="about-row">
-          <span class="about-row-label">Status</span>
-          <span class="about-row-value">Aktif Belajar &amp; Berkarya</span>
-        </div>
-        <div class="about-row">
-          <span class="about-row-label">Lokasi</span>
-          <span class="about-row-value">Sumedang, Jawa Barat, Indonesia</span>
-        </div>
-      </div>
-    </div>
-    <div class="about-content reveal">
-      <p class="about-bio">
-        Halo! Saya <strong>Erik Shandika</strong>, siswa jurusan <strong>Teknik Jaringan Komputer dan Telekomunikasi (TJKT)</strong> yang fokus mengembangkan kemampuan di bidang <strong>networking</strong>, <strong>cybersecurity</strong>, dan <strong>artificial intelligence</strong>.
-      </p>
-      <p class="about-bio">
-        Di sekolah saya mempelajari administrasi jaringan, jaringan kabel dan nirkabel, IP addressing, subnetting, VLSM, VLAN, DHCP, hingga routing menggunakan Cisco Packet Tracer. Dari situ saya mulai tertarik lebih jauh pada cybersecurity — memahami bagaimana jaringan yang saya bangun bisa diamankan, mulai dari dasar-dasar keamanan jaringan hingga eksplorasi Linux.
-      </p>
-      <p class="about-bio">
-        Saya juga sedang mendalami <strong>Machine Learning</strong> menggunakan <strong>Python</strong> sebagai bahasa pemrograman utama untuk eksplorasi AI. HTML, CSS, dan JavaScript saya gunakan sebagai kemampuan pendukung — untuk membuat antarmuka atau tools sederhana yang menunjang project utama saya, bukan sebagai fokus utama.
-      </p>
-      <p class="about-bio">
-        Saya belajar melalui project nyata, eksperimen, dan praktik langsung — bukan sekadar teori.
-      </p>
-    </div>
-  </div>
-
-  <div class="core-interests reveal">
-    <div class="core-interest-card">
-      <i class="fa-solid fa-network-wired core-interest-icon"></i>
-      <h3 class="core-interest-title">Networking</h3>
-      <p class="core-interest-desc">Administrasi jaringan, IP addressing, subnetting, VLSM, VLAN, DHCP, routing, dan simulasi topologi dengan Cisco Packet Tracer.</p>
-    </div>
-    <div class="core-interest-card">
-      <i class="fa-solid fa-shield-halved core-interest-icon"></i>
-      <h3 class="core-interest-title">Cybersecurity</h3>
-      <p class="core-interest-desc">Mempelajari dasar keamanan jaringan dan Linux sebagai lanjutan alami dari pemahaman saya tentang bagaimana jaringan bekerja.</p>
-    </div>
-    <div class="core-interest-card">
-      <i class="fa-solid fa-brain core-interest-icon"></i>
-      <h3 class="core-interest-title">AI / Machine Learning</h3>
-      <p class="core-interest-desc">Eksplorasi Machine Learning dan Computer Vision menggunakan Python, dibuktikan lewat project-project praktis.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════ SKILLS ══════════════ -->
-<section id="skills">
-  <div class="section-header reveal">
-    <div>
-      <div class="section-label">02 — Keahlian</div>
-      <h2 class="section-title">Yang saya <em>kuasai</em></h2>
-    </div>
-    <span class="section-num">02</span>
-  </div>
-  <div class="skills-layout">
-
-    <!-- KATEGORI: NETWORKING (CORE) -->
-    <div class="skill-category skill-category-core reveal" data-delay="0">
-      <div class="skill-cat-header">
-        <i class="fa-solid fa-network-wired skill-cat-icon"></i>
-        <h3 class="skill-cat-title">Networking</h3>
-        <span class="skill-cat-tag">Core</span>
-      </div>
-      <div class="skill-tags">
-        <span class="skill-tag">Network Administration</span>
-        <span class="skill-tag">IP Addressing</span>
-        <span class="skill-tag">TCP/IP</span>
-        <span class="skill-tag">Subnetting</span>
-        <span class="skill-tag">VLSM</span>
-        <span class="skill-tag">VLAN</span>
-        <span class="skill-tag">DHCP</span>
-        <span class="skill-tag">Routing &amp; Switching</span>
-        <span class="skill-tag">Cisco Packet Tracer</span>
-        <span class="skill-tag">Wired &amp; Wireless Networking</span>
-      </div>
-    </div>
-
-    <!-- KATEGORI: CYBERSECURITY (CORE) -->
-    <div class="skill-category skill-category-core reveal" data-delay="100">
-      <div class="skill-cat-header">
-        <i class="fa-solid fa-shield-halved skill-cat-icon"></i>
-        <h3 class="skill-cat-title">Cybersecurity</h3>
-        <span class="skill-cat-tag">Core</span>
-      </div>
-      <div class="skill-tags">
-        <span class="skill-tag">Security Fundamentals</span>
-        <span class="skill-tag">Network Security Fundamentals</span>
-        <span class="skill-tag">Linux Fundamentals</span>
-        <span class="skill-tag">Cybersecurity Learning / Labs</span>
-      </div>
-    </div>
-
-    <!-- KATEGORI: AI / MACHINE LEARNING (CORE) -->
-    <div class="skill-category skill-category-core reveal" data-delay="200">
-      <div class="skill-cat-header">
-        <i class="fa-solid fa-brain skill-cat-icon"></i>
-        <h3 class="skill-cat-title">AI / Machine Learning</h3>
-        <span class="skill-cat-tag">Core</span>
-      </div>
-      <div class="skill-tags">
-        <span class="skill-tag">Machine Learning Fundamentals</span>
-        <span class="skill-tag">Python</span>
-        <span class="skill-tag">Data Processing</span>
-        <span class="skill-tag">Computer Vision</span>
-        <span class="skill-tag">AI Experimentation</span>
-      </div>
-    </div>
-
-    <!-- KATEGORI: PROGRAMMING (SUPPORTING) -->
-    <div class="skill-category reveal" data-delay="0">
-      <div class="skill-cat-header">
-        <i class="fa-solid fa-code skill-cat-icon"></i>
-        <h3 class="skill-cat-title">Programming</h3>
-        <span class="skill-cat-tag skill-cat-tag-support">Supporting</span>
-      </div>
-      <div class="skill-tags">
-        <span class="skill-tag">Python — primary language</span>
-        <span class="skill-tag">JavaScript (Basic + DOM)</span>
-        <span class="skill-tag">C++ (Basic)</span>
-      </div>
-    </div>
-
-    <!-- KATEGORI: WEB (SUPPORTING) -->
-    <div class="skill-category reveal" data-delay="100">
-      <div class="skill-cat-header">
-        <i class="fa-solid fa-globe skill-cat-icon"></i>
-        <h3 class="skill-cat-title">Web</h3>
-        <span class="skill-cat-tag skill-cat-tag-support">Supporting</span>
-      </div>
-      <div class="skill-tags">
-        <span class="skill-tag">HTML</span>
-        <span class="skill-tag">CSS</span>
-        <span class="skill-tag">JavaScript</span>
-        <span class="skill-tag">Responsive Design</span>
-        <span class="skill-tag">DOM Manipulation</span>
-      </div>
-    </div>
-
-    <!-- KATEGORI: TOOLS -->
-    <div class="skill-category reveal" data-delay="200">
-      <div class="skill-cat-header">
-        <i class="fa-solid fa-screwdriver-wrench skill-cat-icon"></i>
-        <h3 class="skill-cat-title">Tools</h3>
-      </div>
-      <div class="skill-tags">
-        <span class="skill-tag">Cisco Packet Tracer</span>
-        <span class="skill-tag">Git</span>
-        <span class="skill-tag">GitHub</span>
-        <span class="skill-tag">VS Code</span>
-        <span class="skill-tag">Linux</span>
-        <span class="skill-tag">Virtual Machine (VirtualBox/VMware)</span>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="learning-journey reveal">
-    <div class="learning-journey-label">
-      <i class="fa-solid fa-seedling"></i>
-      Sedang Dipelajari
-    </div>
-    <div class="skill-tags">
-      <span class="skill-tag skill-tag-learning">Networking Lanjutan</span>
-      <span class="skill-tag skill-tag-learning">Cybersecurity</span>
-      <span class="skill-tag skill-tag-learning">Machine Learning</span>
-      <span class="skill-tag skill-tag-learning">Linux</span>
-      <span class="skill-tag skill-tag-learning">Python</span>
-    </div>
-  </div>
-</section>
-
-<!-- ══════════════ PROJECTS ══════════════ -->
-<section id="projects">
-  <div class="section-header reveal">
-    <div>
-      <div class="section-label">03 — Proyek</div>
-      <h2 class="section-title">Karya yang <em>pernah dibuat</em></h2>
-    </div>
-    <span class="section-num">03</span>
-  </div>
-  <div class="project-featured reveal">
-    <div class="project-featured-shot" onclick="openProjectLightbox('proj1')" role="button" tabindex="0" aria-label="Lihat galeri screenshot Simulasi Jaringan Enterprise dengan VLAN dan OSPF">
-      <img src="img/projek-cisco.png" alt="Screenshot topologi Simulasi Jaringan Enterprise dengan VLAN dan OSPF di Cisco Packet Tracer" loading="lazy">
-    </div>
-    <div class="project-featured-body">
-      <span class="project-featured-label">Proyek Unggulan · Networking</span>
-      <h3 class="project-featured-title">Simulasi Jaringan Enterprise dengan VLAN &amp; OSPF</h3>
-      <p class="project-featured-desc">Kantor pusat dan cabang butuh jaringan yang tersegmentasi, aman, dan tetap saling terhubung. Saya merancang topologi enterprise di Cisco Packet Tracer dengan VLAN untuk memisahkan segmen jaringan, inter-VLAN routing, serta OSPF sebagai protokol routing dinamis antar kantor melalui WAN. Layanan DHCP, DNS, dan Web Server turut dikonfigurasi agar jaringan berfungsi end-to-end. Hasilnya, seluruh perangkat di kedua lokasi dapat saling berkomunikasi sesuai skema VLAN yang direncanakan dan lulus pengujian konektivitas. Dari project ini saya banyak belajar tentang bagaimana desain jaringan yang baik mempengaruhi keamanan dan skalabilitas.</p>
-      <div class="project-featured-tags">
-        <span class="project-tag">Cisco Packet Tracer</span>
-        <span class="project-tag">VLAN</span>
-        <span class="project-tag">OSPF</span>
-        <span class="project-tag">Inter-VLAN Routing</span>
-        <span class="project-tag">DHCP &amp; DNS</span>
-      </div>
-      <div class="project-card-actions">
-        <a href="https://github.com/erikshandika64-code/projek-cisco-1.git" target="_blank" rel="noopener" class="project-btn">GitHub</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="project-group-label reveal">
-    <i class="fa-solid fa-brain"></i> AI &amp; Machine Learning
-  </div>
-  <div class="projects-grid">
-
-<!-- Project: Deteksi Sandi Morse -->
-
-    <div class="project-card reveal">
-      <div class="project-card-shot" onclick="openProjectLightbox('proj4')" role="button" tabindex="0" aria-label="Lihat screenshot Deteksi Sandi Morse">
-        <div class="project-shot-placeholder">
-          <img src="img/cv5.jpg" alt="Screenshot program deteksi sandi morse berbasis computer vision" loading="lazy">
-        </div>
-      </div>
-      <div class="project-card-body">
-        <div class="project-card-title-row">
-          <i class="fa-solid fa-eye project-card-icon"></i>
-          <h3 class="project-card-title">Deteksi Sandi Morse</h3>
-        </div>
-        <span class="project-tag">AI / Computer Vision</span>
-        <p class="project-card-desc">Masalah: menerjemahkan sandi morse dari gerakan tangan secara real-time tanpa alat khusus. Pendekatan: menggunakan Python dan computer vision untuk mendeteksi pola gerakan tangan lalu menerjemahkannya menjadi titik dan garis morse. Hasilnya program dapat mengenali gerakan dasar secara real-time — project ini jadi titik awal saya memahami bagaimana computer vision bekerja di dunia nyata.</p>
-        <div class="project-card-actions">
-          <a href="https://github.com/erikshandika64-code/computer-vision-sandi-morse.git" target="_blank" rel="noopener" class="project-btn project-btn-full">GitHub</a>
-        </div>
-      </div>
-    </div>
-
-<!-- Project: Caption AI UMKM -->
-    <div class="project-card reveal">
-      <div class="project-card-shot" onclick="openProjectLightbox('proj6')" role="button" tabindex="0" aria-label="Lihat screenshot Caption AI UMKM">
-        <div class="project-shot-placeholder">
-          <img src="img/caption-ai.png" alt="Screenshot aplikasi Caption AI UMKM" loading="lazy">
-        </div>
-      </div>
-      <div class="project-card-body">
-        <div class="project-card-title-row">
-          <i class="fa-solid fa-wand-magic-sparkles project-card-icon"></i>
-          <h3 class="project-card-title">Caption AI UMKM</h3>
-        </div>
-        <span class="project-tag">AI Application</span>
-        <p class="project-card-desc">Aplikasi berbasis AI yang membantu pelaku UMKM menghasilkan caption promosi produk secara otomatis. Pengguna memasukkan informasi produk, lalu AI menghasilkan caption yang siap digunakan untuk media sosial atau marketplace — project ini melatih saya mengintegrasikan AI ke dalam sebuah tool yang benar-benar bisa dipakai.</p>
-        <div class="project-card-actions">
-          <a href="https://github.com/erikshandika64-code/caption-umkn.git" target="_blank" rel="noopener" class="project-btn">GitHub</a>
-          <a href="https://caption-ai-umkm.netlify.app/" target="_blank" rel="noopener" class="project-btn project-btn-primary">Lihat ↗</a>
-        </div>
-      </div>
-    </div>
-
-<!-- Project: Dashboard AI UMKM -->
-    <div class="project-card reveal">
-      <div class="project-card-shot" onclick="openProjectLightbox('proj7')" role="button" tabindex="0" aria-label="Lihat screenshot Dashboard AI UMKM">
-        <div class="project-shot-placeholder">
-          <img src="img/dashboard-umkm-ai.png" alt="Screenshot Dashboard AI UMKM" loading="lazy">
-        </div>
-      </div>
-      <div class="project-card-body">
-        <div class="project-card-title-row">
-          <i class="fa-solid fa-chart-line project-card-icon"></i>
-          <h3 class="project-card-title">Dashboard AI UMKM</h3>
-        </div>
-        <span class="project-tag">AI Application</span>
-        <p class="project-card-desc">Dashboard interaktif untuk membantu pelaku UMKM memantau perkembangan bisnis, dilengkapi AI Catatan untuk merangkum informasi otomatis dan AI Assistant yang menjawab pertanyaan seputar data bisnis berdasarkan input pengguna.</p>
-        <div class="project-card-actions">
-          <a href="https://github.com/erikshandika64-code/dasboard_umkm.git" target="_blank" rel="noopener" class="project-btn">GitHub</a>
-          <a href="https://dashboard-umkm-erik.netlify.app/" target="_blank" rel="noopener" class="project-btn project-btn-primary">Lihat ↗</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="project-group-label reveal">
-    <i class="fa-solid fa-laptop-code"></i> Proyek Pendukung — Web &amp; Programming Practice
-  </div>
-  <div class="projects-grid">
-
-<!-- Project: Suit game -->
-
-    <div class="project-card reveal">
-      <div class="project-card-shot" onclick="openProjectLightbox('proj2')" role="button" tabindex="0" aria-label="Lihat screenshot Game Suit Gunting Kertas Batu">
-        <div class="project-shot-placeholder">
-          <img src="img/suit.png" alt="Screenshot antarmuka game Suit Gunting Kertas Batu" loading="lazy">
-        </div>
-      </div>
-      <div class="project-card-body">
-        <div class="project-card-title-row">
-          <i class="fa-solid fa-code project-card-icon"></i>
-          <h3 class="project-card-title">Game Suit Gunting Kertas Batu</h3>
-        </div>
-        <span class="project-tag">Web Development</span>
-        <p class="project-card-desc">Aplikasi permainan suit gunting kertas batu dengan antarmuka yang menarik dan responsif — latihan logika pemrograman dan JavaScript DOM.</p>
-        <div class="project-card-actions">
-          <a href="https://github.com/erikshandika64-code/gunting-kertas-batu.git" target="_blank" rel="noopener" class="project-btn">GitHub</a>
-          <a href="https://gunting-batu-kertas-erik.netlify.app/" target="_blank" rel="noopener" class="project-btn project-btn-primary">Lihat ↗</a>
-        </div>
-      </div>
-    </div>
-
-<!-- Project: Rekap Nilai Rapor -->
-
-    <div class="project-card reveal">
-      <div class="project-card-shot" onclick="openProjectLightbox('proj3')" role="button" tabindex="0" aria-label="Lihat screenshot Rekap Nilai Rapor">
-        <div class="project-shot-placeholder">
-          <img src="img/rekapnilai1.png" alt="Screenshot program Rekap Nilai Rapor" loading="lazy">
-        </div>
-      </div>
-      <div class="project-card-body">
-        <div class="project-card-title-row">
-          <i class="fa-solid fa-code project-card-icon"></i>
-          <h3 class="project-card-title">Rekap Nilai Rapor</h3>
-        </div>
-        <span class="project-tag">Programming</span>
-        <p class="project-card-desc">Aplikasi untuk merekap nilai rapor siswa menggunakan bahasa pemrograman C++ — latihan logika dan struktur data dasar.</p>
-        <div class="project-card-actions">
-          <a href="https://github.com/erikshandika64-code/rekap-nilai-rapot.git" target="_blank" rel="noopener" class="project-btn project-btn-full">GitHub</a>
-        </div>
-      </div>
-    </div>
-
-<!-- Project: Website Profile Kabupaten -->
-
-    <div class="project-card reveal">
-      <div class="project-card-shot" onclick="openProjectLightbox('proj5')" role="button" tabindex="0" aria-label="Lihat screenshot Website Profile Kabupaten">
-        <div class="project-shot-placeholder">
-          <img src="img/web-sumedang.png" alt="Screenshot Website Profile Kabupaten Sumedang" loading="lazy">
-        </div>
-      </div>
-      <div class="project-card-body">
-        <div class="project-card-title-row">
-          <i class="fa-solid fa-code project-card-icon"></i>
-          <h3 class="project-card-title">Website Profile Kabupaten</h3>
-        </div>
-        <span class="project-tag">Web Development</span>
-        <p class="project-card-desc">Tampilan web untuk menampilkan profil kabupaten dengan informasi yang lengkap dan menarik, menggunakan HTML dan CSS.</p>
-        <div class="project-card-actions">
-          <a href="https://github.com/erikshandika64-code/Web-Sumedang.git" target="_blank" rel="noopener" class="project-btn">GitHub</a>
-          <a href="https://6a1acf9e7bc43b9cba863034--websumedang.netlify.app" target="_blank" rel="noopener" class="project-btn project-btn-primary">Lihat ↗</a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ══════════════ CERTIFICATES ══════════════ -->
-<section id="certificates">
-  <div class="section-header reveal">
-    <div>
-      <div class="section-label">04 — Sertifikat</div>
-      <h2 class="section-title">Pencapaian yang <em>diakui</em></h2>
-    </div>
-    <span class="section-num">04</span>
-  </div>
-  <div class="cert-grid">
-
-    <!-- SERTIFIKAT 1 -->
-    <div class="cert-card reveal" data-delay="0" onclick="openLightbox('cert1')" role="button" tabindex="0" aria-label="Lihat detail sertifikat Belajar Membuat Front-End Web untuk Pemula">
-      <div class="cert-img-wrap">
-        <img src="img/sertifikat-1.jpg" alt="Sertifikat Belajar Membuat Front-End Web untuk Pemula" id="cert1-img" loading="lazy">
-        <div class="cert-ribbon">Verified</div>
-        <div class="cert-overlay"><span class="cert-overlay-text">Lihat Detail</span></div>
-      </div>
-      <div class="cert-body">
-        <div class="cert-issuer">Dicoding Indonesia</div>
-        <div class="cert-name">Belajar Membuat Front-End Web untuk Pemula</div>
-        <p class="cert-desc">Sertifikat kompetensi kelulusan atas penguasaan dasar pengembangan antarmuka web yang interaktif dan responsif.</p>
-        <div class="cert-meta">
-          <span class="cert-date">25 April 2026</span>
-          <span class="cert-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+      <div class="hero-left">
+        <span class="hero-tag"
+          >TJKT Student · Networking · Cybersecurity · AI</span
+        >
+        <h1 class="hero-name">
+          Erik<br />
+          <em>Shandika</em>
+        </h1>
+        <p class="hero-desc">
+          Siswa Teknik Jaringan Komputer &amp; Telekomunikasi yang
+          mengeksplorasi networking, cybersecurity, dan artificial intelligence
+          melalui project dan praktik langsung.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#projects" class="hero-cta">
+            Lihat Proyek
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
-            Tersertifikasi
-          </span>
+          </a>
+          <a href="#contact" class="hero-cta hero-cta-ghost">Hubungi Saya</a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-card">
+          <div class="stat-grid">
+            <div class="stat-item">
+              <div class="stat-num">08</div>
+              <div class="stat-label">Proyek</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">04</div>
+              <div class="stat-label">Sertifikat</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">03+</div>
+              <div class="stat-label">Tech Stack</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">TJKT</div>
+              <div class="stat-label">Background</div>
+            </div>
+          </div>
+          <div class="hero-status">
+            <span class="status-dot"></span>
+            Terbuka untuk kolaborasi &amp; proyek baru
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  ABOUT  -->
+    <section id="about">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-label">01 — Tentang Saya</div>
+          <h2 class="section-title">Mengenal <em>lebih dekat</em></h2>
+        </div>
+        <span class="section-num">01</span>
+      </div>
+      <div class="about-grid">
+        <div class="about-info-card reveal">
+          <span class="about-badge-static">TJKT Student</span>
+          <div class="about-details">
+            <div class="about-row">
+              <span class="about-row-label">Sekolah</span>
+              <span class="about-row-value">SMKN Situraja — TJKT</span>
+            </div>
+            <div class="about-row">
+              <span class="about-row-label">Fokus</span>
+              <span class="about-row-value"
+                >Jaringan Komputer dan Administrasi Sistem</span
+              >
+            </div>
+            <div class="about-row">
+              <span class="about-row-label">Status</span>
+              <span class="about-row-value">Aktif Belajar &amp; Berkarya</span>
+            </div>
+            <div class="about-row">
+              <span class="about-row-label">Lokasi</span>
+              <span class="about-row-value"
+                >Sumedang, Jawa Barat, Indonesia</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="about-content reveal">
+          <p class="about-bio">
+            Halo! Saya <strong>Erik Shandika</strong>, siswa jurusan
+            <strong>Teknik Jaringan Komputer dan Telekomunikasi (TJKT)</strong>
+            yang fokus mengembangkan kemampuan di bidang
+            <strong>networking</strong>, <strong>cybersecurity</strong>, dan
+            <strong>artificial intelligence</strong>.
+          </p>
+          <p class="about-bio">
+            Di sekolah saya mempelajari administrasi jaringan, jaringan kabel
+            dan nirkabel, IP addressing, subnetting, VLSM, VLAN, DHCP, hingga
+            routing menggunakan Cisco Packet Tracer. Dari situ saya mulai
+            tertarik lebih jauh pada cybersecurity — memahami bagaimana jaringan
+            yang saya bangun bisa diamankan, mulai dari dasar-dasar keamanan
+            jaringan hingga eksplorasi Linux.
+          </p>
+          <p class="about-bio">
+            Saya juga sedang mendalami
+            <strong>Machine Learning</strong> menggunakan
+            <strong>Python</strong> sebagai bahasa pemrograman utama untuk
+            eksplorasi AI. HTML, CSS, dan JavaScript saya gunakan sebagai
+            kemampuan pendukung — untuk membuat antarmuka atau tools sederhana
+            yang menunjang project utama saya, bukan sebagai fokus utama.
+          </p>
+          <p class="about-bio">
+            Saya belajar melalui project nyata, eksperimen, dan praktik langsung
+            — bukan sekadar teori.
+          </p>
+        </div>
+      </div>
+
+      <div class="core-interests reveal">
+        <div class="core-interest-card">
+          <i class="fa-solid fa-network-wired core-interest-icon"></i>
+          <h3 class="core-interest-title">Networking</h3>
+          <p class="core-interest-desc">
+            Administrasi jaringan, IP addressing, subnetting, VLSM, VLAN, DHCP,
+            routing, dan simulasi topologi dengan Cisco Packet Tracer.
+          </p>
+        </div>
+        <div class="core-interest-card">
+          <i class="fa-solid fa-shield-halved core-interest-icon"></i>
+          <h3 class="core-interest-title">Cybersecurity</h3>
+          <p class="core-interest-desc">
+            Mempelajari dasar keamanan jaringan dan Linux sebagai lanjutan alami
+            dari pemahaman saya tentang bagaimana jaringan bekerja.
+          </p>
+        </div>
+        <div class="core-interest-card">
+          <i class="fa-solid fa-brain core-interest-icon"></i>
+          <h3 class="core-interest-title">AI / Machine Learning</h3>
+          <p class="core-interest-desc">
+            Eksplorasi Machine Learning dan Computer Vision menggunakan Python,
+            dibuktikan lewat project-project praktis.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ SKILLS ══════════════ -->
+    <section id="skills">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-label">02 — Keahlian</div>
+          <h2 class="section-title">Yang saya <em>kuasai</em></h2>
+        </div>
+        <span class="section-num">02</span>
+      </div>
+      <div class="skills-layout">
+        <!-- KATEGORI: NETWORKING (CORE) -->
+        <div class="skill-category skill-category-core reveal" data-delay="0">
+          <div class="skill-cat-header">
+            <i class="fa-solid fa-network-wired skill-cat-icon"></i>
+            <h3 class="skill-cat-title">Networking</h3>
+            <span class="skill-cat-tag">Core</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Network Administration</span>
+            <span class="skill-tag">IP Addressing</span>
+            <span class="skill-tag">TCP/IP</span>
+            <span class="skill-tag">Subnetting</span>
+            <span class="skill-tag">VLSM</span>
+            <span class="skill-tag">VLAN</span>
+            <span class="skill-tag">DHCP</span>
+            <span class="skill-tag">Routing &amp; Switching</span>
+            <span class="skill-tag">Cisco Packet Tracer</span>
+            <span class="skill-tag">Wired &amp; Wireless Networking</span>
+          </div>
+        </div>
+
+        <!-- KATEGORI: CYBERSECURITY (CORE) -->
+        <div class="skill-category skill-category-core reveal" data-delay="100">
+          <div class="skill-cat-header">
+            <i class="fa-solid fa-shield-halved skill-cat-icon"></i>
+            <h3 class="skill-cat-title">Cybersecurity</h3>
+            <span class="skill-cat-tag">Core</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Security Fundamentals</span>
+            <span class="skill-tag">Network Security Fundamentals</span>
+            <span class="skill-tag">Linux Fundamentals</span>
+            <span class="skill-tag">Cybersecurity Learning / Labs</span>
+          </div>
+        </div>
+
+        <!-- KATEGORI: AI / MACHINE LEARNING (CORE) -->
+        <div class="skill-category skill-category-core reveal" data-delay="200">
+          <div class="skill-cat-header">
+            <i class="fa-solid fa-brain skill-cat-icon"></i>
+            <h3 class="skill-cat-title">AI / Machine Learning</h3>
+            <span class="skill-cat-tag">Core</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Machine Learning Fundamentals</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Data Processing</span>
+            <span class="skill-tag">Computer Vision</span>
+            <span class="skill-tag">AI Experimentation</span>
+          </div>
+        </div>
+
+        <!-- KATEGORI: PROGRAMMING (SUPPORTING) -->
+        <div class="skill-category reveal" data-delay="0">
+          <div class="skill-cat-header">
+            <i class="fa-solid fa-code skill-cat-icon"></i>
+            <h3 class="skill-cat-title">Programming</h3>
+            <span class="skill-cat-tag skill-cat-tag-support">Supporting</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python — primary language</span>
+            <span class="skill-tag">JavaScript (Basic + DOM)</span>
+            <span class="skill-tag">C++ (Basic)</span>
+          </div>
+        </div>
+
+        <!-- KATEGORI: WEB (SUPPORTING) -->
+        <div class="skill-category reveal" data-delay="100">
+          <div class="skill-cat-header">
+            <i class="fa-solid fa-globe skill-cat-icon"></i>
+            <h3 class="skill-cat-title">Web</h3>
+            <span class="skill-cat-tag skill-cat-tag-support">Supporting</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Responsive Design</span>
+            <span class="skill-tag">DOM Manipulation</span>
+          </div>
+        </div>
+
+        <!-- KATEGORI: TOOLS -->
+        <div class="skill-category reveal" data-delay="200">
+          <div class="skill-cat-header">
+            <i class="fa-solid fa-screwdriver-wrench skill-cat-icon"></i>
+            <h3 class="skill-cat-title">Tools</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Cisco Packet Tracer</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">Virtual Machine (VirtualBox/VMware)</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="learning-journey reveal">
+        <div class="learning-journey-label">
+          <i class="fa-solid fa-seedling"></i>
+          Sedang Dipelajari
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag skill-tag-learning">Networking Lanjutan</span>
+          <span class="skill-tag skill-tag-learning">Cybersecurity</span>
+          <span class="skill-tag skill-tag-learning">Machine Learning</span>
+          <span class="skill-tag skill-tag-learning">Linux</span>
+          <span class="skill-tag skill-tag-learning">Python</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ PROJECTS ══════════════ -->
+    <section id="projects">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-label">03 — Proyek</div>
+          <h2 class="section-title">Karya yang <em>pernah dibuat</em></h2>
+        </div>
+        <span class="section-num">03</span>
+      </div>
+      <div class="project-featured reveal">
+        <div
+          class="project-featured-shot"
+          onclick="openProjectLightbox('proj1')"
+          role="button"
+          tabindex="0"
+          aria-label="Lihat galeri screenshot Simulasi Jaringan Enterprise dengan VLAN dan OSPF"
+        >
+          <img
+            src="img/projek-cisco.png"
+            alt="Screenshot topologi Simulasi Jaringan Enterprise dengan VLAN dan OSPF di Cisco Packet Tracer"
+            loading="lazy"
+          />
+        </div>
+        <div class="project-featured-body">
+          <span class="project-featured-label"
+            >Proyek Unggulan · Networking</span
+          >
+          <h3 class="project-featured-title">
+            Simulasi Jaringan Enterprise dengan VLAN &amp; OSPF
+          </h3>
+          <p class="project-featured-desc">
+            Kantor pusat dan cabang butuh jaringan yang tersegmentasi, aman, dan
+            tetap saling terhubung. Saya merancang topologi enterprise di Cisco
+            Packet Tracer dengan VLAN untuk memisahkan segmen jaringan,
+            inter-VLAN routing, serta OSPF sebagai protokol routing dinamis
+            antar kantor melalui WAN. Layanan DHCP, DNS, dan Web Server turut
+            dikonfigurasi agar jaringan berfungsi end-to-end. Hasilnya, seluruh
+            perangkat di kedua lokasi dapat saling berkomunikasi sesuai skema
+            VLAN yang direncanakan dan lulus pengujian konektivitas. Dari
+            project ini saya banyak belajar tentang bagaimana desain jaringan
+            yang baik mempengaruhi keamanan dan skalabilitas.
+          </p>
+          <div class="project-featured-tags">
+            <span class="project-tag">Cisco Packet Tracer</span>
+            <span class="project-tag">VLAN</span>
+            <span class="project-tag">OSPF</span>
+            <span class="project-tag">Inter-VLAN Routing</span>
+            <span class="project-tag">DHCP &amp; DNS</span>
+          </div>
+          <div class="project-card-actions">
+            <a
+              href="https://github.com/erikshandika64-code/projek-cisco-1.git"
+              target="_blank"
+              rel="noopener"
+              class="project-btn"
+              >GitHub</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="project-group-label reveal">
+        <i class="fa-solid fa-brain"></i> AI &amp; Machine Learning
+      </div>
+      <div class="projects-grid">
+        <!-- Project: Deteksi Sandi Morse -->
+
+        <div class="project-card reveal">
+          <div
+            class="project-card-shot"
+            onclick="openProjectLightbox('proj4')"
+            role="button"
+            tabindex="0"
+            aria-label="Lihat screenshot Deteksi Sandi Morse"
+          >
+            <div class="project-shot-placeholder">
+              <img
+                src="img/cv5.jpg"
+                alt="Screenshot program deteksi sandi morse berbasis computer vision"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-title-row">
+              <i class="fa-solid fa-eye project-card-icon"></i>
+              <h3 class="project-card-title">Deteksi Sandi Morse</h3>
+            </div>
+            <span class="project-tag">AI / Computer Vision</span>
+            <p class="project-card-desc">
+              Masalah: menerjemahkan sandi morse dari gerakan tangan secara
+              real-time tanpa alat khusus. Pendekatan: menggunakan Python dan
+              computer vision untuk mendeteksi pola gerakan tangan lalu
+              menerjemahkannya menjadi titik dan garis morse. Hasilnya program
+              dapat mengenali gerakan dasar secara real-time — project ini jadi
+              titik awal saya memahami bagaimana computer vision bekerja di
+              dunia nyata.
+            </p>
+            <div class="project-card-actions">
+              <a
+                href="https://github.com/erikshandika64-code/computer-vision-sandi-morse.git"
+                target="_blank"
+                rel="noopener"
+                class="project-btn project-btn-full"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Project: Caption AI UMKM -->
+        <div class="project-card reveal">
+          <div
+            class="project-card-shot"
+            onclick="openProjectLightbox('proj6')"
+            role="button"
+            tabindex="0"
+            aria-label="Lihat screenshot Caption AI UMKM"
+          >
+            <div class="project-shot-placeholder">
+              <img
+                src="img/caption-ai.png"
+                alt="Screenshot aplikasi Caption AI UMKM"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-title-row">
+              <i class="fa-solid fa-wand-magic-sparkles project-card-icon"></i>
+              <h3 class="project-card-title">Caption AI UMKM</h3>
+            </div>
+            <span class="project-tag">AI Application</span>
+            <p class="project-card-desc">
+              Aplikasi berbasis AI yang membantu pelaku UMKM menghasilkan
+              caption promosi produk secara otomatis. Pengguna memasukkan
+              informasi produk, lalu AI menghasilkan caption yang siap digunakan
+              untuk media sosial atau marketplace — project ini melatih saya
+              mengintegrasikan AI ke dalam sebuah tool yang benar-benar bisa
+              dipakai.
+            </p>
+            <div class="project-card-actions">
+              <a
+                href="https://github.com/erikshandika64-code/caption-umkn.git"
+                target="_blank"
+                rel="noopener"
+                class="project-btn"
+                >GitHub</a
+              >
+              <a
+                href="https://caption-ai-umkm.netlify.app/"
+                target="_blank"
+                rel="noopener"
+                class="project-btn project-btn-primary"
+                >Lihat ↗</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Project: Dashboard AI UMKM -->
+        <div class="project-card reveal">
+          <div
+            class="project-card-shot"
+            onclick="openProjectLightbox('proj7')"
+            role="button"
+            tabindex="0"
+            aria-label="Lihat screenshot Dashboard AI UMKM"
+          >
+            <div class="project-shot-placeholder">
+              <img
+                src="img/dashboard-umkm-ai.png"
+                alt="Screenshot Dashboard AI UMKM"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-title-row">
+              <i class="fa-solid fa-chart-line project-card-icon"></i>
+              <h3 class="project-card-title">Dashboard AI UMKM</h3>
+            </div>
+            <span class="project-tag">AI Application</span>
+            <p class="project-card-desc">
+              Dashboard interaktif untuk membantu pelaku UMKM memantau
+              perkembangan bisnis, dilengkapi AI Catatan untuk merangkum
+              informasi otomatis dan AI Assistant yang menjawab pertanyaan
+              seputar data bisnis berdasarkan input pengguna.
+            </p>
+            <div class="project-card-actions">
+              <a
+                href="https://github.com/erikshandika64-code/dasboard_umkm.git"
+                target="_blank"
+                rel="noopener"
+                class="project-btn"
+                >GitHub</a
+              >
+              <a
+                href="https://dashboard-umkm-erik.netlify.app/"
+                target="_blank"
+                rel="noopener"
+                class="project-btn project-btn-primary"
+                >Lihat ↗</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-group-label reveal">
+        <i class="fa-solid fa-laptop-code"></i> Proyek Pendukung — Web &amp;
+        Programming Practice
+      </div>
+      <div class="projects-grid">
+        <!-- Project: Suit game -->
+
+        <div class="project-card reveal">
+          <div
+            class="project-card-shot"
+            onclick="openProjectLightbox('proj2')"
+            role="button"
+            tabindex="0"
+            aria-label="Lihat screenshot Game Suit Gunting Kertas Batu"
+          >
+            <div class="project-shot-placeholder">
+              <img
+                src="img/suit.png"
+                alt="Screenshot antarmuka game Suit Gunting Kertas Batu"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-title-row">
+              <i class="fa-solid fa-code project-card-icon"></i>
+              <h3 class="project-card-title">Game Suit Gunting Kertas Batu</h3>
+            </div>
+            <span class="project-tag">Web Development</span>
+            <p class="project-card-desc">
+              Aplikasi permainan suit gunting kertas batu dengan antarmuka yang
+              menarik dan responsif — latihan logika pemrograman dan JavaScript
+              DOM.
+            </p>
+            <div class="project-card-actions">
+              <a
+                href="https://github.com/erikshandika64-code/gunting-kertas-batu.git"
+                target="_blank"
+                rel="noopener"
+                class="project-btn"
+                >GitHub</a
+              >
+              <a
+                href="https://gunting-batu-kertas-erik.netlify.app/"
+                target="_blank"
+                rel="noopener"
+                class="project-btn project-btn-primary"
+                >Lihat ↗</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Project: Rekap Nilai Rapor -->
+
+        <div class="project-card reveal">
+          <div
+            class="project-card-shot"
+            onclick="openProjectLightbox('proj3')"
+            role="button"
+            tabindex="0"
+            aria-label="Lihat screenshot Rekap Nilai Rapor"
+          >
+            <div class="project-shot-placeholder">
+              <img
+                src="img/rekapnilai1.png"
+                alt="Screenshot program Rekap Nilai Rapor"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-title-row">
+              <i class="fa-solid fa-code project-card-icon"></i>
+              <h3 class="project-card-title">Rekap Nilai Rapor</h3>
+            </div>
+            <span class="project-tag">Programming</span>
+            <p class="project-card-desc">
+              Aplikasi untuk merekap nilai rapor siswa menggunakan bahasa
+              pemrograman C++ — latihan logika dan struktur data dasar.
+            </p>
+            <div class="project-card-actions">
+              <a
+                href="https://github.com/erikshandika64-code/rekap-nilai-rapot.git"
+                target="_blank"
+                rel="noopener"
+                class="project-btn project-btn-full"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Project: Website Profile Kabupaten -->
+
+        <div class="project-card reveal">
+          <div
+            class="project-card-shot"
+            onclick="openProjectLightbox('proj5')"
+            role="button"
+            tabindex="0"
+            aria-label="Lihat screenshot Website Profile Kabupaten"
+          >
+            <div class="project-shot-placeholder">
+              <img
+                src="img/web-sumedang.png"
+                alt="Screenshot Website Profile Kabupaten Sumedang"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-title-row">
+              <i class="fa-solid fa-code project-card-icon"></i>
+              <h3 class="project-card-title">Website Profile Kabupaten</h3>
+            </div>
+            <span class="project-tag">Web Development</span>
+            <p class="project-card-desc">
+              Tampilan web untuk menampilkan profil kabupaten dengan informasi
+              yang lengkap dan menarik, menggunakan HTML dan CSS.
+            </p>
+            <div class="project-card-actions">
+              <a
+                href="https://github.com/erikshandika64-code/Web-Sumedang.git"
+                target="_blank"
+                rel="noopener"
+                class="project-btn"
+                >GitHub</a
+              >
+              <a
+                href="https://6a1acf9e7bc43b9cba863034--websumedang.netlify.app"
+                target="_blank"
+                rel="noopener"
+                class="project-btn project-btn-primary"
+                >Lihat ↗</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- projek iot  -->
+        <div class="project-card reveal">
+          <div
+            class="project-card-shot"
+            onclick="openProjectLightbox('proj8')"
+            role="button"
+            tabindex="0"
+            aria-label="Lihat screenshot IoT Berbasis RFID"
+          >
+            <div class="project-shot-placeholder">
+              <img
+                src="img/iot-1.png"
+                alt="Screenshot program Rekap Nilai Rapor"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-title-row">
+              <i class="fa-solid fa-code project-card-icon"></i>
+              <h3 class="project-card-title">
+                Sistem Absensi RFID — Absensi Otomatis Berbasis IoT
+              </h3>
+            </div>
+
+            <div class="project-featured-tags">
+              <span class="project-tag">ESP32</span>
+              <span class="project-tag">IoT</span>
+              <span class="project-tag">Supabase</span>
+              <span class="project-tag">Row Level Security</span>
+              <span class="project-tag">Rest API</span>
+            </div>
+            <p class="project-card-desc">
+              Sistem Absensi RFID — IoT + Cloud Integration Sistem absensi
+              berbasis kartu RFID yang menghubungkan perangkat IoT (ESP32 +
+              RC522) dengan database cloud secara real-time. Dilengkapi
+              autentikasi berlapis, Row Level Security, dan sistem verifikasi
+              izin digital.
+            </p>
+            <div class="project-card-actions">
+              <a
+                href="https://github.com/erikshandika64-code/portofolio.git"
+                target="_blank"
+                rel="noopener"
+                class="project-btn project-btn-full"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ CERTIFICATES ══════════════ -->
+    <section id="certificates">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-label">04 — Sertifikat</div>
+          <h2 class="section-title">Pencapaian yang <em>diakui</em></h2>
+        </div>
+        <span class="section-num">04</span>
+      </div>
+      <div class="cert-grid">
+        <!-- SERTIFIKAT 1 -->
+        <div
+          class="cert-card reveal"
+          data-delay="0"
+          onclick="openLightbox('cert1')"
+          role="button"
+          tabindex="0"
+          aria-label="Lihat detail sertifikat Belajar Membuat Front-End Web untuk Pemula"
+        >
+          <div class="cert-img-wrap">
+            <img
+              src="img/sertifikat-1.jpg"
+              alt="Sertifikat Belajar Membuat Front-End Web untuk Pemula"
+              id="cert1-img"
+              loading="lazy"
+            />
+            <div class="cert-ribbon">Verified</div>
+            <div class="cert-overlay">
+              <span class="cert-overlay-text">Lihat Detail</span>
+            </div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer">Dicoding Indonesia</div>
+            <div class="cert-name">
+              Belajar Membuat Front-End Web untuk Pemula
+            </div>
+            <p class="cert-desc">
+              Sertifikat kompetensi kelulusan atas penguasaan dasar pengembangan
+              antarmuka web yang interaktif dan responsif.
+            </p>
+            <div class="cert-meta">
+              <span class="cert-date">25 April 2026</span>
+              <span class="cert-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Tersertifikasi
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SERTIFIKAT 2 -->
+        <div
+          class="cert-card reveal"
+          data-delay="100"
+          onclick="openLightbox('cert2')"
+          role="button"
+          tabindex="0"
+          aria-label="Lihat detail sertifikat Belajar Dasar Pemrograman Web"
+        >
+          <div class="cert-img-wrap">
+            <img
+              src="img/sertifikat-2.jpg"
+              alt="Sertifikat Belajar Dasar Pemrograman Web"
+              id="cert2-img"
+              loading="lazy"
+            />
+            <div class="cert-ribbon">Verified</div>
+            <div class="cert-overlay">
+              <span class="cert-overlay-text">Lihat Detail</span>
+            </div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer">Dicoding Indonesia</div>
+            <div class="cert-name">Belajar Dasar Pemrograman Web</div>
+            <p class="cert-desc">
+              Sertifikat kompetensi kelulusan atas penguasaan dasar pemrograman
+              web — HTML, CSS, dan JavaScript fundamental.
+            </p>
+            <div class="cert-meta">
+              <span class="cert-date">15 Maret 2026</span>
+              <span class="cert-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Tersertifikasi
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- sertifikat 3 -->
+        <div
+          class="cert-card reveal"
+          data-delay="200"
+          onclick="openLightbox('cert3')"
+          role="button"
+          tabindex="0"
+          aria-label="Lihat detail sertifikat Belajar Dasar Pemrograman JavaScript"
+        >
+          <div class="cert-img-wrap">
+            <img
+              src="img/sertifikat3.png"
+              alt="Sertifikat Belajar Dasar Pemrograman JavaScript"
+              id="cert3-img"
+              loading="lazy"
+            />
+            <div class="cert-ribbon">Verified</div>
+            <div class="cert-overlay">
+              <span class="cert-overlay-text">Lihat Detail</span>
+            </div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer">Dicoding Indonesia</div>
+            <div class="cert-name">Belajar Dasar Pemrograman JavaScript</div>
+            <p class="cert-desc">
+              Sertifikat kompetensi kelulusan atas penguasaan dasar pemrograman
+              JavaScript.
+            </p>
+            <div class="cert-meta">
+              <span class="cert-date">19 April 2026</span>
+              <span class="cert-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Tersertifikasi
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- SERTIFIKAT 4 -->
+        <div
+          class="cert-card reveal"
+          data-delay="300"
+          onclick="openLightbox('cert4')"
+          role="button"
+          tabindex="0"
+          aria-label="Lihat detail sertifikat Belajar Dasar Cloud dan Gen AI di AWS"
+        >
+          <div class="cert-img-wrap">
+            <img
+              src="img/sertifikat-4.png"
+              alt="Sertifikat Belajar Dasar Cloud dan Gen AI di AWS"
+              id="cert4-img"
+              loading="lazy"
+            />
+            <div class="cert-ribbon">Verified</div>
+            <div class="cert-overlay">
+              <span class="cert-overlay-text">Lihat Detail</span>
+            </div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer">Dicoding Indonesia</div>
+            <div class="cert-name">Belajar Dasar Cloud dan Gen Ai di AWS</div>
+            <p class="cert-desc">
+              Sertifikat kompetensi kelulusan atas penguasaan dasar cloud dan
+              kecerdasan buatan di AWS.
+            </p>
+            <div class="cert-meta">
+              <span class="cert-date">08 Juli 2026</span>
+              <span class="cert-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Tersertifikasi
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- sertif ke 5 -->
+
+        <div
+          class="cert-card reveal"
+          data-delay="300"
+          onclick="openLightbox('cert5')"
+          role="button"
+          tabindex="0"
+          aria-label="Lihat detail sertifikat Pemrograman Python"
+        >
+          <div class="cert-img-wrap">
+            <img
+              src="img/sertifikat-5.png"
+              alt="sertifikat Pemrograman Python"
+              id="cert5-img"
+              loading="lazy"
+            />
+            <div class="cert-ribbon">Verified</div>
+            <div class="cert-overlay">
+              <span class="cert-overlay-text">Lihat Detail</span>
+            </div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-issuer">Dicoding Indonesia</div>
+            <div class="cert-name">Memulai Pemrograman dengan Python</div>
+            <p class="cert-desc">
+              Sertifikat kompetensi kelulusan atas penguasaan Pemrograman
+              Python.
+            </p>
+            <div class="cert-meta">
+              <span class="cert-date">08 Juli 2026</span>
+              <span class="cert-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                Tersertifikasi
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+      <div class="lightbox-inner">
+        <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
+        <button
+          class="lightbox-nav lightbox-prev"
+          id="lightbox-prev"
+          onclick="lightboxPrev(event)"
+        >
+          ‹
+        </button>
+        <button
+          class="lightbox-nav lightbox-next"
+          id="lightbox-next"
+          onclick="lightboxNext(event)"
+        >
+          ›
+        </button>
+        <div
+          style="
+            background: var(--bg);
+            min-height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <img
+            class="lightbox-img"
+            id="lightbox-img"
+            src=""
+            alt=""
+            style="display: none"
+          />
+          <div
+            id="lightbox-placeholder"
+            style="
+              text-align: center;
+              padding: 3rem;
+              color: var(--muted);
+              flex-direction: column;
+              gap: 1rem;
+              display: flex;
+              align-items: center;
+            "
+          >
+            <div style="font-size: 3.5rem" id="lightbox-placeholder-icon">
+              🏅
+            </div>
+            <div
+              style="
+                font-size: 0.78rem;
+                letter-spacing: 0.1em;
+                text-transform: uppercase;
+              "
+              id="lightbox-placeholder-text"
+            >
+              Foto sertifikat belum ditambahkan
+            </div>
+          </div>
+        </div>
+        <div class="lightbox-dots" id="lightbox-dots"></div>
+        <div class="lightbox-info">
+          <div class="lightbox-title" id="lightbox-title"></div>
+          <div class="lightbox-sub" id="lightbox-sub"></div>
         </div>
       </div>
     </div>
 
-    <!-- SERTIFIKAT 2 -->
-    <div class="cert-card reveal" data-delay="100" onclick="openLightbox('cert2')" role="button" tabindex="0" aria-label="Lihat detail sertifikat Belajar Dasar Pemrograman Web">
-      <div class="cert-img-wrap">
-        <img src="img/sertifikat-2.jpg" alt="Sertifikat Belajar Dasar Pemrograman Web" id="cert2-img" loading="lazy">
-        <div class="cert-ribbon">Verified</div>
-        <div class="cert-overlay"><span class="cert-overlay-text">Lihat Detail</span></div>
-      </div>
-      <div class="cert-body">
-        <div class="cert-issuer">Dicoding Indonesia</div>
-        <div class="cert-name">Belajar Dasar Pemrograman Web</div>
-        <p class="cert-desc">Sertifikat kompetensi kelulusan atas penguasaan dasar pemrograman web — HTML, CSS, dan JavaScript fundamental.</p>
-        <div class="cert-meta">
-          <span class="cert-date">15 Maret 2026</span>
-          <span class="cert-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-            Tersertifikasi
-          </span>
+    <!-- ══════════════ CONTACT ══════════════ -->
+    <section id="contact">
+      <div class="section-header reveal">
+        <div>
+          <div class="section-label">05 — Kontak</div>
+          <h2 class="section-title">Mari <em>berkolaborasi</em></h2>
         </div>
+        <span class="section-num">05</span>
       </div>
-    </div>
-
-    <!-- sertifikat 3 -->
-    <div class="cert-card reveal" data-delay="200" onclick="openLightbox('cert3')" role="button" tabindex="0" aria-label="Lihat detail sertifikat Belajar Dasar Pemrograman JavaScript">
-      <div class="cert-img-wrap">
-        <img src="img/sertifikat3.png" alt="Sertifikat Belajar Dasar Pemrograman JavaScript" id="cert3-img" loading="lazy">
-        <div class="cert-ribbon">Verified</div>
-        <div class="cert-overlay"><span class="cert-overlay-text">Lihat Detail</span></div>
-      </div>
-      <div class="cert-body">
-        <div class="cert-issuer">Dicoding Indonesia</div>
-        <div class="cert-name">Belajar Dasar Pemrograman JavaScript</div>
-        <p class="cert-desc">Sertifikat kompetensi kelulusan atas penguasaan dasar pemrograman JavaScript.</p>
-        <div class="cert-meta">
-          <span class="cert-date">19 April 2026</span>
-          <span class="cert-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-            Tersertifikasi
-          </span>
+      <div class="contact-grid">
+        <div>
+          <p class="contact-intro reveal">
+            Saya selalu terbuka untuk berdiskusi soal networking, cybersecurity,
+            AI, atau sekadar kolaborasi project. Jangan ragu untuk menghubungi
+            saya!
+          </p>
+          <div class="contact-links reveal">
+            <a href="mailto:erikshandika64@gmail.com" class="contact-link">
+              <i class="fa-solid fa-envelope contact-link-icon"></i>
+              erikshandika64@gmail.com
+            </a>
+            <a
+              href="https://github.com/erikshandika64-code"
+              target="_blank"
+              rel="noopener"
+              class="contact-link"
+            >
+              <i class="fa-brands fa-github contact-link-icon"></i>
+              GitHub
+            </a>
+            <a
+              href="https://www.dicoding.com/users/erik_shandika64t/academies"
+              target="_blank"
+              rel="noopener"
+              class="contact-link"
+            >
+              <i class="fa-solid fa-graduation-cap contact-link-icon"></i>
+              Dicoding
+            </a>
+            <a
+              href="https://www.instagram.com/erik178303?igsh=N3I3dzZ4Y3BwdXd3"
+              target="_blank"
+              rel="noopener"
+              class="contact-link"
+            >
+              <i class="fa-brands fa-instagram contact-link-icon"></i>
+              Instagram
+            </a>
+          </div>
         </div>
+        <form class="contact-form reveal" id="contact-form" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="contact-name">Nama</label>
+            <input
+              class="form-input"
+              id="contact-name"
+              type="text"
+              data-field="name"
+              placeholder="Nama lengkap Anda"
+              aria-describedby="err-name"
+            />
+            <span class="form-error" id="err-name" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-email">Email</label>
+            <input
+              class="form-input"
+              id="contact-email"
+              type="email"
+              data-field="email"
+              placeholder="email@contoh.com"
+              aria-describedby="err-email"
+            />
+            <span class="form-error" id="err-email" role="alert"></span>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contact-message">Pesan</label>
+            <textarea
+              class="form-textarea"
+              id="contact-message"
+              placeholder="Ceritakan proyek atau ide Anda..."
+              aria-describedby="err-message"
+            ></textarea>
+            <span class="form-error" id="err-message" role="alert"></span>
+          </div>
+          <button class="form-btn" type="submit">Kirim Pesan →</button>
+          <p
+            class="form-status"
+            id="form-status"
+            role="status"
+            aria-live="polite"
+          ></p>
+        </form>
       </div>
-    </div>
+    </section>
 
-    <!-- SERTIFIKAT 4 -->
-    <div class="cert-card reveal" data-delay="300" onclick="openLightbox('cert4')" role="button" tabindex="0" aria-label="Lihat detail sertifikat Belajar Dasar Cloud dan Gen AI di AWS">
-      <div class="cert-img-wrap">
-        <img src="img/sertifikat-4.png" alt="Sertifikat Belajar Dasar Cloud dan Gen AI di AWS" id="cert4-img" loading="lazy">
-        <div class="cert-ribbon">Verified</div>
-        <div class="cert-overlay"><span class="cert-overlay-text">Lihat Detail</span></div>
-      </div>
-      <div class="cert-body">
-        <div class="cert-issuer">Dicoding Indonesia</div>
-        <div class="cert-name">Belajar Dasar Cloud dan Gen Ai di AWS</div>
-        <p class="cert-desc">Sertifikat kompetensi kelulusan atas penguasaan dasar cloud dan kecerdasan buatan di AWS.</p>
-        <div class="cert-meta">
-          <span class="cert-date">08 Juli 2026</span>
-          <span class="cert-badge">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-            Tersertifikasi
-          </span>
-        </div>
-      </div>
-    </div>
+    <!-- FOOTER -->
+    <footer>
+      <span
+        >© 2026 Erik Shandika — TJKT Student · Networking · Cybersecurity ·
+        AI</span
+      >
+      <a href="#hero">Kembali ke atas ↑</a>
+    </footer>
 
-  </div>
-</section>
-
-<!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
-  <div class="lightbox-inner">
-    <button class="lightbox-close" onclick="closeLightbox(event)">✕</button>
-    <button class="lightbox-nav lightbox-prev" id="lightbox-prev" onclick="lightboxPrev(event)">‹</button>
-    <button class="lightbox-nav lightbox-next" id="lightbox-next" onclick="lightboxNext(event)">›</button>
-    <div style="background:var(--bg);min-height:200px;display:flex;align-items:center;justify-content:center;">
-      <img class="lightbox-img" id="lightbox-img" src="" alt="" style="display:none;" />
-      <div id="lightbox-placeholder" style="text-align:center;padding:3rem;color:var(--muted);flex-direction:column;gap:1rem;display:flex;align-items:center;">
-        <div style="font-size:3.5rem;" id="lightbox-placeholder-icon">🏅</div>
-        <div style="font-size:0.78rem;letter-spacing:0.1em;text-transform:uppercase;" id="lightbox-placeholder-text">Foto sertifikat belum ditambahkan</div>
-      </div>
-    </div>
-    <div class="lightbox-dots" id="lightbox-dots"></div>
-    <div class="lightbox-info">
-      <div class="lightbox-title" id="lightbox-title"></div>
-      <div class="lightbox-sub"   id="lightbox-sub"></div>
-    </div>
-  </div>
-</div>
-
-<!-- ══════════════ CONTACT ══════════════ -->
-<section id="contact">
-  <div class="section-header reveal">
-    <div>
-      <div class="section-label">05 — Kontak</div>
-      <h2 class="section-title">Mari <em>berkolaborasi</em></h2>
-    </div>
-    <span class="section-num">05</span>
-  </div>
-  <div class="contact-grid">
-    <div>
-      <p class="contact-intro reveal">
-        Saya selalu terbuka untuk berdiskusi soal networking, cybersecurity, AI, atau sekadar kolaborasi project. Jangan ragu untuk menghubungi saya!
-      </p>
-      <div class="contact-links reveal">
-        <a href="mailto:erikshandika64@gmail.com" class="contact-link">
-          <i class="fa-solid fa-envelope contact-link-icon"></i>
-          erikshandika64@gmail.com
-        </a>
-        <a href="https://github.com/erikshandika64-code" target="_blank" rel="noopener" class="contact-link">
-          <i class="fa-brands fa-github contact-link-icon"></i>
-          GitHub
-        </a>
-        <a href="https://www.dicoding.com/users/erik_shandika64t/academies" target="_blank" rel="noopener" class="contact-link">
-          <i class="fa-solid fa-graduation-cap contact-link-icon"></i>
-          Dicoding
-        </a>
-        <a href="https://www.instagram.com/erik178303?igsh=N3I3dzZ4Y3BwdXd3" target="_blank" rel="noopener" class="contact-link">
-          <i class="fa-brands fa-instagram contact-link-icon"></i>
-          Instagram
-        </a>
-      </div>
-    </div>
-    <form class="contact-form reveal" id="contact-form" novalidate>
-      <div class="form-group">
-        <label class="form-label" for="contact-name">Nama</label>
-        <input class="form-input" id="contact-name" type="text" data-field="name" placeholder="Nama lengkap Anda" aria-describedby="err-name" />
-        <span class="form-error" id="err-name" role="alert"></span>
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="contact-email">Email</label>
-        <input class="form-input" id="contact-email" type="email" data-field="email" placeholder="email@contoh.com" aria-describedby="err-email" />
-        <span class="form-error" id="err-email" role="alert"></span>
-      </div>
-      <div class="form-group">
-        <label class="form-label" for="contact-message">Pesan</label>
-        <textarea class="form-textarea" id="contact-message" placeholder="Ceritakan proyek atau ide Anda..." aria-describedby="err-message"></textarea>
-        <span class="form-error" id="err-message" role="alert"></span>
-      </div>
-      <button class="form-btn" type="submit">Kirim Pesan →</button>
-      <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-    </form>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <span>© 2026 Erik Shandika — TJKT Student · Networking · Cybersecurity · AI</span>
-  <a href="#hero">Kembali ke atas ↑</a>
-</footer>
-
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

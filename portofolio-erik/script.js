@@ -115,6 +115,7 @@ const certData = {
   cert2: { title: 'Belajar Dasar Pemrograman Web',             sub: 'Dicoding Indonesia · 15 Maret 2026 · ID: JMZVO9033XN9' },
   cert3: { title: 'Belajar Dasar Pemrograman JavaScript',      sub: 'Dicoding Indonesia · 19 April 2026' },
   cert4: { title: 'Belajar Dasar Cloud dan Gen Ai di AWS',     sub: 'Dicoding Indonesia · 08 Juli 2026 · ID: XYZ789ABC123' },
+  cert5: { title: 'Memulai Pemograman dengan Python',     sub: 'Dicoding Indonesia · 21 Agustus 2026 · ID: GRX50GW9RZ0M' },
 };
 
 // Setiap project bisa punya lebih dari 1 foto — tinggal tambah path di array "photos".
@@ -127,6 +128,7 @@ const projectData = {
   proj5: { title: 'Website Profile Kabupaten',       photos: ['img/web-sumedang.png'] },
   proj6: { title: 'Caption AI UMKM',                 photos: ['img/caption-ai.png','img/caption-ai2.png'] },
   proj7: { title: 'Dashboard AI UMKM',               photos: ['img/dashboard-umkm-ai.png', 'img/dashboard-umkm-ai2.png'] },
+  proj8: { title: 'Sistem Absensi RFID — Absensi Otomatis Berbasis IoT', photos: ['img/iot-1.png','img/iot-2.png','img/iot-3.png','img/iot-4.png','img/iot-5.png','img/iot-6.png','img/iot-7.png'] }
 };
 
 let currentGallery = null;
