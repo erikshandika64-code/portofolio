@@ -121,14 +121,15 @@ const certData = {
 // Setiap project bisa punya lebih dari 1 foto — tinggal tambah path di array "photos".
 // Urutan foto mengikuti urutan di array ini (paling atas = foto pertama tampil).
 const projectData = {
-  proj1: { title: 'Simulasi Jaringan Enterprise dengan VLAN & OSPF',       photos: ['img/projek-cisco.png','img/cisco3.png','img/cisco2.png','img/cisco4.png','img/cisco5.png','img/cisco6.png','img/cisco7.png'] },
-  proj2: { title: 'Game Suit Gunting Kertas Batu',   photos: ['img/suit.png'] },
-  proj3: { title: 'Rekap Nilai Rapor',               photos: ['img/rekapnilai1.png', 'img/rekapnilai2.png'] },
-  proj4: { title: 'Deteksi Sandi Morse',             photos: ['img/cv5.jpg','img/cv4.jpg','img/cv3.jpg','img/cv1.jpg'] },
-  proj5: { title: 'Website Profile Kabupaten',       photos: ['img/web-sumedang.png'] },
-  proj6: { title: 'Caption AI UMKM',                 photos: ['img/caption-ai.png','img/caption-ai2.png'] },
-  proj7: { title: 'Dashboard AI UMKM',               photos: ['img/dashboard-umkm-ai.png', 'img/dashboard-umkm-ai2.png'] },
-  proj8: { title: 'Sistem Absensi RFID — Absensi Otomatis Berbasis IoT', photos: ['img/iot-1.png','img/iot-2.png','img/iot-3.png','img/iot-4.png','img/iot-5.png','img/iot-6.png','img/iot-7.png'] }
+  proj1: { title: 'Simulasi Jaringan Enterprise dengan VLAN & OSPF',       photos: ['img/networking-vlan-ospf-topologi.webp','img/networking-vlan-ospf-3.webp','img/networking-vlan-ospf-2.webp','img/networking-vlan-ospf-4.webp','img/networking-vlan-ospf-5.webp','img/networking-vlan-ospf-6.webp','img/networking-vlan-ospf-7.webp'] },
+  proj2: { title: 'Game Suit Gunting Kertas Batu',   photos: ['img/game-suit-batu-kertas.webp'] },
+  proj3: { title: 'Rekap Nilai Rapor',               photos: ['img/rekap-nilai-rapor-1.webp', 'img/rekap-nilai-rapor-2.webp'] },
+  proj4: { title: 'Deteksi Sandi Morse',             photos: ['img/computer-vision-morse-1.webp','img/computer-vision-morse-2.webp','img/computer-vision-morse-3.webp','img/computer-vision-morse-4.webp'] },
+  proj5: { title: 'Website Profile Kabupaten',       photos: ['img/web-profil-sumedang.webp'] },
+  proj6: { title: 'Caption AI UMKM',                 photos: ['img/caption-ai-umkm-1.webp','img/caption-ai-umkm-2.webp'] },
+  proj7: { title: 'Dashboard AI UMKM',               photos: ['img/dashboard-umkm-ai-1.webp', 'img/dashboard-umkm-ai-2.webp'] },
+  proj8: { title: 'Sistem Absensi RFID — Absensi Otomatis Berbasis IoT', photos: ['img/iot-rfid-absensi-1.webp','img/iot-rfid-absensi-2.webp','img/iot-rfid-absensi-3.webp','img/iot-rfid-absensi-4.webp','img/iot-rfid-absensi-5.webp','img/iot-rfid-absensi-6.webp','img/iot-rfid-absensi-7.webp'] },
+  proj9: { title: 'Secure Login System (Python + Argon2)', photos: ['img/secure-login-argon2-menu.webp','img/secure-login-argon2-lockout.webp','img/secure-login-argon2-berhasil.webp'] }
 };
 
 let currentGallery = null;
