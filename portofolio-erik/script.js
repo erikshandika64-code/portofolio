@@ -116,6 +116,7 @@ const certData = {
   cert3: { title: 'Belajar Dasar Pemrograman JavaScript',      sub: 'Dicoding Indonesia · 19 April 2026' },
   cert4: { title: 'Belajar Dasar Cloud dan Gen Ai di AWS',     sub: 'Dicoding Indonesia · 08 Juli 2026 · ID: XYZ789ABC123' },
   cert5: { title: 'Memulai Pemograman dengan Python',     sub: 'Dicoding Indonesia · 21 Agustus 2026 · ID: GRX50GW9RZ0M' },
+  cert6: { title: 'Belajar Penggunaan Generative AI',     sub: 'Dicoding Indonesia · 25 Mei 2026 · ID: 4EXGTD8OEPRL' },
 };
 
 // Setiap project bisa punya lebih dari 1 foto — tinggal tambah path di array "photos".
@@ -333,3 +334,4 @@ contactForm.addEventListener('submit', async (e) => {
     btn.disabled = false;
   }
 });
+                                                                         
