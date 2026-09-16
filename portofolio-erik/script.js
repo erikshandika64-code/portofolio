@@ -123,6 +123,7 @@ const certData = {
 // Urutan foto mengikuti urutan di array ini (paling atas = foto pertama tampil).
 const projectData = {
   proj1: { title: 'Simulasi Jaringan Enterprise dengan VLAN & OSPF',       photos: ['img/networking-vlan-ospf-topologi.webp','img/networking-vlan-ospf-3.webp','img/networking-vlan-ospf-2.webp','img/networking-vlan-ospf-4.webp','img/networking-vlan-ospf-5.webp','img/networking-vlan-ospf-6.webp','img/networking-vlan-ospf-7.webp'] },
+  proj10: { title: 'Keamanan Jaringan Multi-Site (VLAN, ACL &amp; Port Security)', photos: ['img/keamanan-jaringan-topologi.webp','img/keamanan-jaringan-vlan-brief.webp','img/keamanan-jaringan-acl-config.webp','img/keamanan-jaringan-ping-antar-vlan.webp','img/keamanan-jaringan-ping-guest-blocked-1.webp','img/keamanan-jaringan-ping-guest-blocked-2.webp','img/keamanan-jaringan-ping-guest-staff.webp','img/keamanan-jaringan-ping-staff2-gateway.webp','img/keamanan-jaringan-ping-crosssite.webp'] },
   proj2: { title: 'Game Suit Gunting Kertas Batu',   photos: ['img/game-suit-batu-kertas.webp'] },
   proj3: { title: 'Rekap Nilai Rapor',               photos: ['img/rekap-nilai-rapor-1.webp', 'img/rekap-nilai-rapor-2.webp'] },
   proj4: { title: 'Deteksi Sandi Morse',             photos: ['img/computer-vision-morse-1.webp','img/computer-vision-morse-2.webp','img/computer-vision-morse-3.webp','img/computer-vision-morse-4.webp'] },

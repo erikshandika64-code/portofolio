@@ -7,9 +7,7 @@
       name="description"
       content="Portfolio Erik Shandika, siswa TKJ SMKN Situraja yang fokus mengembangkan kemampuan di bidang Networking, Cybersecurity, dan Artificial Intelligence melalui project dan praktik langsung."
     />
-    <title>
-      Erik Shandika — TKJ Student · Networking · Cybersecurity · AI
-    </title>
+    <title>Erik Shandika — TKJ Student · Networking · Cybersecurity · AI</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -64,9 +62,9 @@
           <em>Shandika</em>
         </h1>
         <p class="hero-desc">
-          Siswa Teknik Komputer Jaringan (TKJ) yang
-          mendalami networking, cybersecurity, dan artificial intelligence
-          lewat proyek nyata dan praktik langsung.
+          Siswa Teknik Komputer Jaringan (TKJ) yang mendalami networking,
+          cybersecurity, dan artificial intelligence lewat proyek nyata dan
+          praktik langsung.
         </p>
         <div class="hero-cta-group">
           <a href="#projects" class="hero-cta">
@@ -88,7 +86,7 @@
         <div class="hero-card">
           <div class="stat-grid">
             <div class="stat-item">
-              <div class="stat-num">09</div>
+              <div class="stat-num">10</div>
               <div class="stat-label">Proyek</div>
             </div>
             <div class="stat-item">
@@ -132,8 +130,8 @@
             <div class="about-row">
               <span class="about-row-label">Fokus</span>
               <span class="about-row-value"
-                >Jaringan Komputer, Cybersecurity, AI </span
-              >
+                >Jaringan Komputer, Cybersecurity, AI
+              </span>
             </div>
             <div class="about-row">
               <span class="about-row-label">Status</span>
@@ -160,21 +158,21 @@
             dan nirkabel, IP addressing, subnetting, VLSM, VLAN, DHCP, hingga
             routing menggunakan Cisco Packet Tracer. Dari situ saya makin
             tertarik pada cybersecurity — memahami cara mengamankan jaringan
-            yang saya bangun sendiri, mulai dari dasar keamanan jaringan
-            hingga eksplorasi Linux.
+            yang saya bangun sendiri, mulai dari dasar keamanan jaringan hingga
+            eksplorasi Linux.
           </p>
           <p class="about-bio">
             Saya juga sedang mendalami
-            <strong>AI</strong> — dari dasar-dasarnya, AI ethics, sampai
-            prompt engineering — dengan <strong>Python</strong> sebagai
-            bahasa pemrograman utama, dan Machine Learning sebagai target
-            belajar berikutnya. HTML, CSS, dan JavaScript saya pakai sebagai
-            kemampuan pendukung, untuk membangun antarmuka atau tools
-            sederhana yang menunjang project utama, bukan sebagai fokus utama.
+            <strong>AI</strong> — dari dasar-dasarnya, AI ethics, sampai prompt
+            engineering — dengan <strong>Python</strong> sebagai bahasa
+            pemrograman utama, dan Machine Learning sebagai target belajar
+            berikutnya. HTML, CSS, dan JavaScript saya pakai sebagai kemampuan
+            pendukung, untuk membangun antarmuka atau tools sederhana yang
+            menunjang project utama, bukan sebagai fokus utama.
           </p>
           <p class="about-bio">
-            Saya lebih suka belajar lewat project nyata, eksperimen, dan
-            praktik langsung — bukan sekadar teori.
+            Saya lebih suka belajar lewat project nyata, eksperimen, dan praktik
+            langsung — bukan sekadar teori.
           </p>
         </div>
       </div>
@@ -395,6 +393,59 @@
       </div>
 
       <div class="project-group-label reveal">
+        <i class="fa-solid fa-network-wired"></i> Networking &amp; Security
+      </div>
+      <div class="projects-grid">
+        <div class="project-card reveal">
+          <div
+            class="project-card-shot"
+            onclick="openProjectLightbox('proj10')"
+            role="button"
+            tabindex="0"
+            aria-label="Lihat galeri screenshot Keamanan Jaringan Multi-Site"
+          >
+            <div class="project-shot-placeholder">
+              <img
+                src="img/keamanan-jaringan-topologi.webp"
+                alt="Screenshot topologi Keamanan Jaringan Multi-Site dengan VLAN, ACL, dan Port Security di Cisco Packet Tracer"
+                loading="lazy"
+              />
+            </div>
+          </div>
+          <div class="project-card-body">
+            <div class="project-card-title-row">
+              <i class="fa-solid fa-shield-halved project-card-icon"></i>
+              <h3 class="project-card-title">Keamanan Jaringan Multi-Site</h3>
+            </div>
+            <span class="project-tag">Networking &amp; Security</span>
+            <p class="project-card-desc">
+              Masalah: sebuah kantor pusat dan cabang butuh jaringan yang
+              tersegmentasi per departemen sekaligus aman dari akses lintas VLAN
+              yang tidak seharusnya. Pendekatan: merancang topologi dua site di
+              Cisco Packet Tracer dengan segmentasi VLAN (Admin, Staff, Server,
+              Guest), port security (sticky MAC, violation shutdown) di setiap
+              access port, Access Control List untuk membatasi VLAN Guest agar
+              tidak bisa mengakses VLAN Admin dan Server, serta static routing
+              multi-site melalui WAN. Seluruh skenario pengujian — konektivitas
+              antar VLAN, pemblokiran ACL, dan komunikasi antar site — berhasil
+              sesuai rancangan. Project ini melatih saya memahami keamanan
+              jaringan berlapis (defense in depth), bukan cuma konektivitas
+              dasar.
+            </p>
+            <div class="project-card-actions">
+              <a
+                href="https://github.com/erikshandika64-code/-Keamanan-Jaringan-Multi-Site.git"
+                target="_blank"
+                rel="noopener"
+                class="project-btn project-btn-full"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-group-label reveal">
         <i class="fa-solid fa-shield-halved"></i> Cybersecurity
       </div>
       <div class="projects-grid">
@@ -423,16 +474,16 @@
             </div>
             <span class="project-tag">Cybersecurity</span>
             <p class="project-card-desc">
-              Masalah: banyak program login sederhana menyimpan password
-              secara plain text dan tidak membatasi percobaan login, sehingga
-              rentan terhadap brute force. Pendekatan: sistem login berbasis
-              Python yang meng-hash password menggunakan Argon2 — algoritma
-              hashing modern yang tahan terhadap serangan brute force dan
-              GPU cracking — dilengkapi validasi username/password, pembatasan
-              maksimal 3 percobaan login gagal, serta penguncian akun
-              sementara selama 60 detik setelah percobaan gagal berturut-turut.
-              Project ini melatih saya memahami penerapan praktik keamanan
-              dasar dalam autentikasi, bukan sekadar teori kriptografi.
+              Masalah: banyak program login sederhana menyimpan password secara
+              plain text dan tidak membatasi percobaan login, sehingga rentan
+              terhadap brute force. Pendekatan: sistem login berbasis Python
+              yang meng-hash password menggunakan Argon2 — algoritma hashing
+              modern yang tahan terhadap serangan brute force dan GPU cracking —
+              dilengkapi validasi username/password, pembatasan maksimal 3
+              percobaan login gagal, serta penguncian akun sementara selama 60
+              detik setelah percobaan gagal berturut-turut. Project ini melatih
+              saya memahami penerapan praktik keamanan dasar dalam autentikasi,
+              bukan sekadar teori kriptografi.
             </p>
             <div class="project-card-actions">
               <a
@@ -713,9 +764,8 @@
             </div>
             <span class="project-tag">Web Development</span>
             <p class="project-card-desc">
-              Tampilan web untuk menampilkan profil kabupaten dengan
-              informasi lengkap dan menarik, dibangun menggunakan HTML dan
-              CSS.
+              Tampilan web untuk menampilkan profil kabupaten dengan informasi
+              lengkap dan menarik, dibangun menggunakan HTML dan CSS.
             </p>
             <div class="project-card-actions">
               <a
@@ -1051,8 +1101,8 @@
             <div class="cert-issuer">Dicoding Indonesia</div>
             <div class="cert-name">Belajar Penggunaan Generative AI</div>
             <p class="cert-desc">
-              Sertifikat kompetensi kelulusan atas penguasaan dasar
-              penggunaan Generative AI.
+              Sertifikat kompetensi kelulusan atas penguasaan dasar penggunaan
+              Generative AI.
             </p>
             <div class="cert-meta">
               <span class="cert-date">25 Mei 2026</span>
