@@ -131,7 +131,8 @@ const projectData = {
   proj6: { title: 'Caption AI UMKM',                 photos: ['img/caption-ai-umkm-1.webp','img/caption-ai-umkm-2.webp'] },
   proj7: { title: 'Dashboard AI UMKM',               photos: ['img/dashboard-umkm-ai-1.webp', 'img/dashboard-umkm-ai-2.webp'] },
   proj8: { title: 'Sistem Absensi RFID — Absensi Otomatis Berbasis IoT', photos: ['img/iot-rfid-absensi-1.webp','img/iot-rfid-absensi-2.webp','img/iot-rfid-absensi-3.webp','img/iot-rfid-absensi-4.webp','img/iot-rfid-absensi-5.webp','img/iot-rfid-absensi-6.webp','img/iot-rfid-absensi-7.webp'] },
-  proj9: { title: 'Secure Login System (Python + Argon2)', photos: ['img/secure-login-argon2-menu.webp','img/secure-login-argon2-lockout.webp','img/secure-login-argon2-berhasil.webp'] }
+  proj9: { title: 'Secure Login System (Python + Argon2)', photos: ['img/secure-login-argon2-menu.webp','img/secure-login-argon2-lockout.webp','img/secure-login-argon2-berhasil.webp'] },
+  proj11: { title: 'MikroTik Hotspot Voucher System', photos: ['img/mikrotik-hotspot-login-custom.webp','img/mikrotik-hotspot-login-berhasil.webp','img/mikrotik-hotspot-ip-address.webp','img/mikrotik-hotspot-users-voucher.webp','img/mikrotik-hotspot-nat-masquerade.webp'] }
 };
 
 let currentGallery = null;
